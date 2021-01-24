@@ -1,59 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Loopstudios landing page</title>
+	<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+	<link rel="stylesheet" href="style.css">
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+	<title>Frontend Mentor | Loopstudios landing page</title>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet"> 
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap" rel="stylesheet"> 
+ 
 </head>
 <body>
-  About
-  Careers
-  Events
-  Products
-  Support
+	<div id="heading">
+		<div>
+			<div>
+			
+				<span id="title">loopstudios</span>
+				
+				<ul id="about">
+					<li><span class="underline">____</span>About</li>
+					<li><span class="underline">____</span>Careers</li>
+					<li><span class="underline">____</span>Events</li>
+					<li><span class="underline">____</span>Products</li>
+					<li><span class="underline">____</span>Support</li>
+				</ul>
+			</div>
+			<div id="immersive">
+				Immersive experiences that deliver
+			</div>
+		
+		</div>
+	</div>
+	<div id="leader_in_vr">
+		<div>
+			<h1>The leader in interactive VR</h1>
 
-  Immersive experiences that deliver
+			<span>Founded in 2011, Loopstudios has been producing world-class virtual reality 
+			projects for some of the best companies around the globe. Our award-winning 
+			creations have transformed businesses through digital experiences that bind 
+			to their brand.</span>
+		</div>
+	</div>
+	<div id="our_creations">
+		<h1>our creations</h1>
+		<button>see all</button>
+	</div>
+	<div id="flex_container">
+		<div><span>Deep earth</span></div>
+		<div><span>Night arcade</span></div>
+		<div><span>Soccer team VR</span></div>
+		<div><span>The grid</span></div>
+		<div><span>From up above VR</span></div>
+		<div><span>Pocket borealis</span></div>
+		<div><span>The curiosity</span></div>
+		<div><span>Make it fisheye</span></div>
+	</div>
+	
+	<div id="footer">
+		<div id="footer_inner">
+			<div id="footer_inner_first">
+				<span>loopstudios</span>
+				<img src="images/icon-instagram.svg" alt="instagram">
+				<img src="images/icon-pinterest.svg" alt="pinterest">
+				<img src="images/icon-twitter.svg" alt="twitter">
+				<img src="images/icon-facebook.svg" alt="facebook">
+			</div>
+			<div id="footer_inner_second">
+				<ul id="about">
+					<li><span class="underline">____</span>About</li>
+					<li><span class="underline">____</span>Careers</li>
+					<li><span class="underline">____</span>Events</li>
+					<li><span class="underline">____</span>Products</li>
+					<li><span class="underline">____</span>Support</li>
+				</ul>
+				
+				<span>© 2021 Loopstudios. All rights reserved.</span>
+			</div>
+		</div>
+	</div>
+	
+	
 
-  The leader in interactive VR
 
-  Founded in 2011, Loopstudios has been producing world-class virtual reality 
-  projects for some of the best companies around the globe. Our award-winning 
-  creations have transformed businesses through digital experiences that bind 
-  to their brand.
 
-  Our creations
-
-  See all
-
-  Deep earth
-  Night arcade
-  Soccer team VR
-  The grid
-  From up above VR
-  Pocket borealis
-  The curiosity
-  Make it fisheye
-
-  About
-  Careers
-  Events
-  Products
-  Support
-
-  © 2021 Loopstudios. All rights reserved.
 
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="#">Nedjeljko-Miloslavic</a>.
   </div>
+  
+  <script>
+	
+	var images = document.querySelectorAll("img");
+	function create_nodes(){
+		var nodes = [];
+		var images = document.querySelectorAll("img");
+		for(let i=0; i<images.length; i++){
+			let node = document.createElement("span");
+			node.innerHTML = "____";
+			
+			node.setAttribute("style", "visibility:hidden; color:white; letter-spacing:-3px; position:absolute; top:" + (images[i].y+20) + "px; left:" + images[i].x + "px;");
+			nodes.push(node);
+		}
+		
+		return nodes;
+	}
+
+	document.addEventListener("DOMContentLoaded", ()=>{
+		var nodes = create_nodes();
+		for(let i=0; i<nodes.length; i++){
+			document.body.appendChild(nodes[i]);
+		}
+		
+		window.addEventListener("resize", ()=>{
+			
+			for(let i=0; i<nodes.length; i++){
+				document.body.removeChild(nodes[i]);
+			}
+			
+			nodes = create_nodes();
+			for(let i=0; i<nodes.length; i++){
+				document.body.appendChild(nodes[i]);
+			}
+			
+			var span = document.querySelectorAll("span");
+			
+		});
+		var span = document.querySelectorAll("span");
+		
+		for(let i=span.length-1; i>span.length-nodes.length-1; i--){
+			//span[i].style.visibility = "hidden";
+			span[i].addEventListener("click", ()=>{
+				
+			});
+		}
+		
+		for(let i=0; i<nodes.length; i++){
+			images[i].addEventListener("mouseover", ()=>{
+				nodes[i].style.visibility = "visible";
+			});
+			
+			images[i].addEventListener("mouseout", ()=>{
+				nodes[i].style.visibility = "hidden";
+			});
+		}
+	});
+	
+	
+	
+
+	
+  </script>
 </body>
 </html>
