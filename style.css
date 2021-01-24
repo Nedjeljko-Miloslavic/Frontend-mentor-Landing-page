@@ -1,0 +1,330 @@
+*{
+	box-sizing:border-box;
+}
+
+body{
+	margin:0;
+	
+}
+
+div{
+	margin-bottom:50px;
+}
+
+#heading{
+	background-image:url("images/desktop/image-hero.jpg");
+	background-size:100% 100%;
+	width:100%;
+	height:600px;
+	color:white;
+}
+
+#heading > div{
+	width:80%;
+	
+	margin:auto;
+	height:500px;
+}
+
+#heading > div > div{
+	padding-top:40px;
+}
+
+#title{
+	font-size:30px;
+	font-family:sans-serif;
+	font-weight:bold;
+}
+
+#about{
+	display:inline;
+	float:right;
+}
+
+#about li{
+	display:inline;
+	margin:10px;
+	font-family:'Josefin Sans', sans-serif;
+	font-weight:bold;
+}
+
+#immersive{
+	width:60%;
+	height:55%;
+	border:white solid 2px;
+	font-size:65px;
+	text-transform:uppercase;
+	font-family:'Josefin Sans', sans-serif;
+	padding:20px;
+}
+
+#leader_in_vr{
+	background-image:url("images/desktop/image-interactive.jpg");
+	width:80%;
+	height:450px;
+	margin:auto;
+	background-repeat:no-repeat;
+	background-size:65% 100%;
+	margin-bottom:100px;
+	margin-top:100px;
+	position:relative;
+}
+
+#leader_in_vr div{
+	height:300px;
+	width:50%;
+	background-color:white;
+	position:absolute;
+	bottom:0px;
+	right:0;
+	margin:0;
+	padding:60px;
+}
+
+#leader_in_vr div h1{
+	font-family:'Josefin Sans', sans-serif;
+	text-transform:uppercase;
+}
+
+#leader_in_vr div span{
+	font-family:'Josefin Sans', sans-serif;
+	font-weight:bold;
+	color:hsl(0, 0%, 55%);
+	font-size:15px;
+}
+
+#our_creations{
+	width:80%;
+	margin:auto;
+	text-transform:uppercase;
+	height:100px;
+}
+
+#our_creations h1{
+	float:left;
+	font-family: 'Josefin Sans', sans-serif;
+	font-size:40px;
+}
+
+#our_creations button{
+	text-transform:uppercase;
+	float:right;
+	background-color:white;
+	border: solid hsl(0, 0%, 41%) 2px;
+	font-family: 'Alata', sans-serif;
+	padding:7px 29px;
+	letter-spacing:3px;
+	position:relative;
+	top:22px;
+}
+
+#our_creations button:hover{
+	cursor:pointer;
+}
+
+#flex_container{
+	display:flex;
+	width:80%;
+	height:800px;
+	margin:auto;
+	flex-wrap:wrap;
+	justify-content:space-between;
+	margin-bottom:100px;
+}
+
+#flex_container > div{
+	width:22%;
+	height:45%;
+	margin:0;
+	color:white;
+	font-size:30px;
+	text-transform:uppercase;
+	font-family: 'Josefin Sans', sans-serif;
+	text-align:center;
+	vertical-align:text-bottom;
+	position:relative;
+	background-color:rgba(200,200,200,0.8);
+
+}
+
+#flex_container > div:hover{
+	background-blend-mode:lighten;
+	color:black;
+	cursor:pointer;
+}
+
+#flex_container > div span{
+	display:block;
+	position:absolute;
+	bottom:20px;
+	margin-left:20px;
+	
+}
+
+#flex_container div:nth-child(1){
+	background-image:url("images/desktop/image-deep-earth.jpg");
+	background-size:100% 100%;
+}
+
+#flex_container div:nth-child(2){
+	background-image:url("images/desktop/image-night-arcade.jpg");
+	background-size:100% 100%;
+}
+
+#flex_container div:nth-child(3){
+	background-image:url("images/desktop/image-soccer-team.jpg");
+	background-size:100% 100%;
+}
+
+#flex_container div:nth-child(4){
+	background-image:url("images/desktop/image-grid.jpg");
+	background-size:100% 100%;
+}
+
+#flex_container div:nth-child(5){
+	background-image:url("images/desktop/image-from-above.jpg");
+	background-size:100% 100%;
+}
+
+#flex_container div:nth-child(7){
+	background-image:url("images/desktop/image-curiosity.jpg");
+	background-size:100% 100%;
+}
+
+#flex_container div:nth-child(6){
+	background-image:url("images/desktop/image-pocket-borealis.jpg");
+	background-size:100% 100%;
+}
+
+#flex_container div:nth-child(8){
+	background-image:url("images/desktop/image-fisheye.jpg");
+	background-size:100% 100%;
+}
+
+
+#footer{
+	background:black;
+	color:white;
+	margin-bottom:0;
+}
+
+#footer_inner{
+	width:80%;
+	margin:auto;
+}
+
+#footer_inner_first img{
+	float:right;
+	margin-right:12px;
+}
+
+#footer_inner_first img:hover{
+	cursor:pointer;
+}
+
+#footer_inner_first{
+	padding-top:30px;
+	margin-bottom:30px;
+}
+
+#footer_inner_first span{
+	font-size:25px;
+	font-family:sans-serif;
+	font-weight:bold;
+}
+
+#footer_inner_second{
+	padding-bottom:30px;
+}
+
+#footer_inner_second ul li{
+	padding-bottom:30px;
+	margin:0;
+}
+
+#footer_inner_second ul{
+	margin:0;
+}
+
+#footer_inner_second ul li:hover{
+	cursor:pointer;
+}
+
+#footer_inner_second ul li:hover span{
+	visibility:visible;
+}
+
+#about li:hover span{
+	visibility:visible;
+}
+
+#about li:hover{
+	cursor:pointer;
+}
+
+#about li span{
+	font-size:20px;
+}
+
+.underline{
+	letter-spacing:-3px;
+	position:relative;
+	top:10px;
+	left:40px;
+	visibility:hidden;
+}
+
+
+
+
+
+/*
+
+# Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+- White: hsl(0, 0%, 100%)
+- Black: hsl(0, 0%, 0%)
+- Dark Gray: hsl(0, 0%, 55%)
+- Very Dark Gray: hsl(0, 0%, 41%)
+
+### Neutral
+
+## Typography
+
+### Body Copy
+
+- Font size: 15px
+
+### Fonts
+
+- Family: [Alata](https://fonts.google.com/specimen/Alata)
+- Weight: 400
+
+- Family: [Josefin Sans](https://fonts.google.com/specimen/Josefin+Sans)
+- Weight: 300
+
+## Icons
+
+We provide the required social icons. But, if you prefer, you can use a font icon library. Some suggestions can be found below:
+
+- [Font Awesome](https://fontawesome.com)
+- [IcoMoon](https://icomoon.io)
+- [Ionicons](https://ionicons.com)
+
+
+*/
+
+
+.attribution { font-size: 11px; text-align: center; margin:20px;}
+.attribution a { color: hsl(228, 45%, 44%); }
